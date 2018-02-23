@@ -11,7 +11,7 @@ create table Programs_Offered
 
 create table Programs_Scheduled
 (Scheduled_program_id varchar2(5) primary key, ProgramName varchar2(5) references 
-	Programs_Offered(program_name), 
+	Programs_Offered(program_name) on delete cascade, 
 	Location varchar2(10), start_date date, end_date date, sessions_per_week number);
 
 create table program_location 
